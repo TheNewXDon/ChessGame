@@ -63,7 +63,20 @@ public class Board {
 		
 	}
 
-	
+	public void view() {
+		for (int righe = 7; righe >= 0; righe--) {
+			for (int colonne = 0; colonne < 8; colonne++) {
+				System.out.print("[");
+				if (this.caselle[righe][colonne].piece != null) 
+					System.out.print(this.caselle[righe][colonne].piece.notazione);
+				else
+					System.out.print(" ");
+				System.out.print("]");
+			}
+			System.out.println();
+		}
+		System.out.println("***********************");
+	}
 	
 	@Override
 	public String toString() {

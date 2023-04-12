@@ -3,6 +3,7 @@ package com.chessgame;
 import java.util.List;
 
 import com.chessgame.model.Piece;
+import com.chessgame.model.Square;
 import com.chessgame.model.Board;
 import com.chessgame.model.pezzi.Bishop;
 import com.chessgame.model.pezzi.Knight;
@@ -24,6 +25,18 @@ public class ChessGameApplication {
 			for (int j = 0; j < 8; j++)
 			System.out.println(board.caselle[i][j].toString());
 		}
+		Square e4 = new Square();
+		e4 = e4.getSquareByPosition(board, 4, 5);
+		System.out.println(e4.toString());
+		board.view();
+		System.out.println("***********************");
+		if (board.caselle[1][4].piece.checkMove(2, 5, board.caselle[3][4])) {
+			board.caselle[1][4].piece.move(4, 5);
+			e4.piece = board.caselle[1][4].piece;
+			board.caselle[1][4].piece = null;
+		}
+			
+		board.view();
 		//test mosse alfiere
 		Piece alfiere = new Bishop();
 		List<Integer[]> listaMosse = alfiere.movesList(6, 4);

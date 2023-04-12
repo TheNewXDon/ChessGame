@@ -14,7 +14,7 @@ public class Knight extends Piece{
 
 	public Knight(boolean isWhite, int riga, int colonna) {
 		this.isWhite = isWhite;
-		notazione = isWhite ? "C" : "c";
+		notazione = isWhite ? "N" : "n";
 		colore = isWhite ? 'W' : 'B';
 		super.riga = riga;
 		super.colonna = colonna;
