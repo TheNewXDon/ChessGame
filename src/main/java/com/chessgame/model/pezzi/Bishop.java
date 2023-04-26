@@ -16,6 +16,7 @@ public class Bishop extends Piece{
 	
 	public Bishop(boolean isWhite, int riga, int colonna) {
 		this.isWhite = isWhite;
+		simbolo = isWhite ? "♗" : "♝";
 		notazione = isWhite ? "B" : "b";
 		colore = isWhite ? 'W' : 'B';
 		super.riga = riga;

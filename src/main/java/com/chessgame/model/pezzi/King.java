@@ -14,6 +14,7 @@ public class King extends Piece{
 	
 	public King(boolean isWhite, int riga, int colonna) {
 		this.isWhite = isWhite;
+		simbolo = isWhite ? "♔" : "♚";
 		notazione = isWhite ? "K" : "k";
 		colore = isWhite ? 'W' : 'B';
 		super.riga = riga;

@@ -14,6 +14,7 @@ public class Queen extends Piece{
 	
 	public Queen(boolean isWhite, int riga, int colonna) {
 		this.isWhite = isWhite;
+		simbolo = isWhite ? "♕" : "♛";
 		notazione = isWhite ? "Q" : "q";
 		colore = isWhite ? 'W' : 'B';
 		super.riga = riga;

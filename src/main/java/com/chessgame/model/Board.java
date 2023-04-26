@@ -77,7 +77,18 @@ public class Board {
 		}
 		System.out.println("***********************");
 	}
-	
+
+	public void moving(int rowStart, int columnStart, int rowFinal, int columnFinal) {
+		Square square = new Square();
+		square = square.getSquareByPosition(this, rowFinal, columnFinal);
+		if (this.caselle[rowStart-1][columnStart-1].piece.checkMove(rowStart, columnStart, this.caselle[rowFinal-1][columnFinal-1])) {
+			this.caselle[rowStart-1][columnStart-1].piece.move(rowFinal, columnFinal);
+			square.piece = this.caselle[rowStart-1][columnStart-1].piece;
+			this.caselle[rowStart-1][columnStart-1].piece = null;
+		}
+		this.view();
+	}
+
 	@Override
 	public String toString() {
 		return "Scacchiera [caselle=" + Arrays.toString(caselle) + ", pezzi=" + pezzi + ", configurazione="

@@ -13,6 +13,7 @@ public class Rook extends Piece{
 
 	public Rook(boolean isWhite, int riga, int colonna) {
 		this.isWhite = isWhite;
+		simbolo = isWhite ? "♖" : "♜";
 		notazione = isWhite ? "R" : "r";
 		colore = isWhite ? 'W' : 'B';
 		super.riga = riga;

@@ -15,6 +15,7 @@ public class Pawn extends Piece{
 	
 	public Pawn(boolean isWhite, int riga, int colonna) {
 		this.isWhite = isWhite;
+		simbolo = isWhite ? "♙" : "♟︎";
 		notazione = isWhite ? "P" : "p";
 		colore = isWhite ? 'W' : 'B';
 		super.riga = riga;

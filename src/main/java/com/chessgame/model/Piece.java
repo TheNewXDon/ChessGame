@@ -9,6 +9,7 @@ import lombok.ToString;
 @ToString
 public abstract class Piece {
 	protected String notazione;
+	protected String simbolo;
 	protected boolean isWhite;
 	protected char colore;
 	protected int riga;
